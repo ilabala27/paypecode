@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268036667881",
+    "project_id": "payee-764c2",
+    "storage_bucket": "payee-764c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268036667881:android:a15477f030644d079eb378",
+        "android_client_info": {
+          "package_name": "com.paype"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268036667881-3cinu2l7pr0rpku4ginqmh16hbrthn36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDJiFtDQywpygEtsqIP12fbgg34uPM7-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268036667881-3cinu2l7pr0rpku4ginqmh16hbrthn36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,50 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "logs/error/.08886dd94153e2e6b4ff8bd27e4c468c38b52a80-audit.json",
+    "files": [
+        {
+            "date": 1659968527917,
+            "name": "logs/error/08-08-2022.log",
+            "hash": "8d3ea373e4aa8b0cc15e0c2f2bccf5508a7b78f8ad280d5daaf58445a4693ced"
+        },
+        {
+            "date": 1660024821817,
+            "name": "logs/error/09-08-2022.log",
+            "hash": "a7894ede44b2d2c53a6378e519e359a290427c66da24fdcd2fd381f1bd2de860"
+        },
+        {
+            "date": 1660073608958,
+            "name": "logs/error/10-08-2022.log",
+            "hash": "9360f32a2af2a9c1d875b310f42d5f0929e636d0ab80ac035467dd570d978829"
+        },
+        {
+            "date": 1660199096996,
+            "name": "logs/error/11-08-2022.log",
+            "hash": "27855b2b25b081fc720bc7a7308487576ec5a32e3b8ff5746cad5d8739d11a25"
+        },
+        {
+            "date": 1660250522901,
+            "name": "logs/error/12-08-2022.log",
+            "hash": "b7a690cdb62e37e3126612f5a513663b25d47a1d5df6a8c5d4cbfcc903620b8b"
+        },
+        {
+            "date": 1660334344854,
+            "name": "logs/error/13-08-2022.log",
+            "hash": "4b25ce9994e866a9842649e54d8800c65bbdb89a282a171011296752c41a4c6b"
+        },
+        {
+            "date": 1660416119475,
+            "name": "logs/error/14-08-2022.log",
+            "hash": "963424e5304eaec1233c784617bab3eaf207c064772425b56d273912a017b226"
+        },
+        {
+            "date": 1660501899856,
+            "name": "logs/error/15-08-2022.log",
+            "hash": "4fc0c392fe270d3ad224348e0c02066dab92631f83ccdddb90a341566ef80601"
+        }
+    ],
+    "hashType": "sha256"
+}

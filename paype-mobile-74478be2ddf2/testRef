@@ -1,0 +1,409 @@
+
+
+1. session registry
+2. One login 
+3. Selfie login first time
+ 
+
+
+Root - 95 ( 9578551126 - Welcome123* )
+Admin - 95 ( 9578551126 - Welcome123* )
+user_super_distributor - Arun ( 9345389466 - Arun@123 )
+user_distributor - 99 ( 9942280098 - Welcome@123 )
+Retai - 98 ( 9842061973 - Welcome@123 )
+
+
+
+
+
+
+
+
+1.Root user -onboarding permission
+2.service options must be selected
+5.Paype services for onboarding
+6.recharge and bill payments
+8.selfie option 
+10.pull to refresh icon refresh issue
+11.no limits for admin onboarding 
+12.user information req on cash deposits
+13.read for upload doc
+14.req notification while approving
+22.loader should be impletes while making onboarding scrren 
+27.rootuser and admin user has all options
+28.aadhar card front and back 
+29.firebase config
+31.transaction balance needs to be same  
+32.have to add  cashb deposit optionin admin role
+33.back option not working on approval in cash
+35.application icon and splash screen
+36.no error 400 should show instead insufficient funds should come
+37.retailor spelling mistake
+38.have to show error msg back- 
+39.temporary password previous msg is shown in text input by default
+41.contact multi select option should not be allowed
+42.uploaded document can be viewed by user
+back button on viewer
+
+
+> Pan card offline
+
+
+> Bank list drop down
+
+> notification count on list vertification / actiation ( check multi approve  )
+> User role empty
+> Logo
+
+
+
+> UserType based on onboarding purchase
+> Fave for service
+> Service refine ment
+> REcharge service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const loggedInConfiguration = async () => {
+    try {
+      await getOperatorList()
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  {"status":true,"response_code":1,"operatorid":"DUMMYOPERATOR
+  ID","ackno":29885,"refid":"0.26375885812963","message":"Recharge for Idea of Amount 10 is successful."}
+  const getOperatorList = () => {
+    PSRechargeApi.mobileOperator()
+      .then((res: any) => {
+        const array = res.data.data
+        array.forEach((el: any, i: number) => el.key = i)
+        setProviderOptions(array)
+      })
+      .catch((e: any) => console.log("error catch", e))
+  }
+  useEffect(() => {
+    loggedInConfiguration()
+  }, [user])
+
+{{HOST}}:3002/api/v1/cr-wallet/user/zmXaqdGQbz1z-fW9betrYPvB/balance
+
+> init server on user side
+> RBAC Test
+
+> Dashboard
+> profile
+
+
+
+Tabs: 
+Console
+
+Home
+Services
+Wallet
+
+Transactions
+
+-Profile
+
+
+
+>> Features
+1. wallet
+2. business service
+3. Transaction service
+
+
+7. dashboard screen
+3. selfie
+
+>> Low priority
+1. pagination
+2. access token from refresh token
+3. one session 
+4. banner service
+5. userId with some serial
+
+>>> check
+ediable after rejectv
+user Address creating
+Busniess remove for employeee
+multiple upload
+menu count
+bank deatisl acc namew edit remote
+
+
+
+>> Questions?
+Busniess user hirarichy 
+Distributor can able to create one more distributor 
+Agent can able to create one more agent 
+
+
+
+
+
+
+Other
+https://dev.cookr.in/api/menu-service/api-docs/#/
+
+
+
+
+
+
+
+
+>> Saga
+yield delay(4000);
+// yield takeLatest(ADMIN_SAGA_ACTIONS.TEST, test);
+  yield takeEvery(ADMIN_SAGA_ACTIONS.SET_PERMISSIONS, test);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root:rbac
+    rbac:permisison
+        rbac:permisison:create
+        rbac:permisison:read
+        rbac:permisison:update
+        rbac:permisison:delete
+    rbac:permisison-group
+        rbac:permisison-group:create
+        rbac:permisison-group:read
+        rbac:permisison-group:update
+        rbac:permisison-group:delete
+    rbac:role
+        rbac:role:create
+        rbac:role:read
+        rbac:role:update
+        rbac:role:delete
+
+root:services
+    services:dmt
+    services:mobile-recharge
+    services:dth
+
+root:onboarding-user
+    onboarding-user:new-user
+    onboarding-user:in-progress
+    onboarding-user:verification
+    onboarding-user:activation
+
+root:user-management
+    user-management:active-user
+
+
+
+
+
+
+
+
+
+import React, { useEffect } from 'react';
+import { Image, Text, View } from 'react-native';
+
+import { MainHeader } from '@views/components/functional/MainHeader';
+import { ScrollView } from '@views/components/functional/Scrollview';
+import { INavigationProps } from '@utilis/interfaces/navigation.interface';
+import design from '@config/design.config';
+import { Button } from '@views/components/functional/Button';
+import { systemTransportor } from '@models/redux/system/system.transportor';
+import PPUserAPIs from '@models/api/paype/user/user.api';
+import { adminTransportor } from '@models/redux/admin/admin.transportor';
+import { useDispatch } from 'react-redux';
+import { adminActions } from '@models/redux/admin/admin.slice';
+import { SYSTEM_SAGA_ACTIONS } from '@models/redux/system/system.sagaActions';
+
+
+export default ({ route, navigation }: INavigationProps) => {
+  const { adminStore } = adminTransportor()
+  const { permissions } = adminStore()
+  const { setLogout } = systemTransportor()
+
+  useEffect(() => {
+
+  }, [])
+
+  return (
+    <View style={design.GENERIC_SCREEN_S}>
+      <MainHeader
+        render={[
+          { type: "Title", title: "Profile" },
+        ]}
+      />
+      <ScrollView style={design.GENERIC_CONTAINER_S}>
+        <Text style={design.GENERIC_TEXT_CONTENT_P}>Profile {permissions.length}</Text>
+        <Button
+          onPress={setLogout}
+          label={'logout'}
+        />
+
+        <Image source={{ uri: "https://i.pinimg.com/474x/db/b4/85/dbb4856ee511998ebe22aa34576e0a66.jpg" }}
+          style={{ height: '100%', width: '100%', resizeMode: 'stretch' }}
+        />
+
+      </ScrollView>
+    </View>
+  );
+};
+
+
+
+
+
+
+Airtel Recharge of 1000@3% commission
+Total Available commission from api partner = 30 
+
+>> Commission 
+Super Distributor commission = 0.20
+Distributor commission = 0.25
+Retailor commission 1000@2.75 = 27.50
+PayPe = 2.5
+
+
+
+Recharge of 100@3% commission
+Total Available commission from api partner = 3
+
+>> Commission 
+Super Distributor commission = 0.20
+Distributor commission = 0.25
+Retailor commission 1000@2.75 = 2.75
+PayPe = 2.5
+
+
+{
+  super_distributor: 'WGcSVUWT-OFw6jtXy1xR3Zth',
+  distributor: '7RQVc_YrVLWqh54o6ro4Dvn7',
+  org: 'wldqAfItXnLAtuZhU950UGav',
+  transact_user_id: 'UZKUI4YLDPG0ke1iH3QCpWN9',
+  user_id: 'UZKUI4YLDPG0ke1iH3QCpWN9',
+  user_name: 'Retailer',
+  mobile: '9578551126',
+  operator: {
+    category: 'Prepaid',
+    id: '11',
+    name: 'Airtel',
+    commission: {
+      total: '3.0000',
+      o: '0.2050',
+      sd: '0.0200',
+      d: '0.02500',
+      r: '2.7500'
+    }
+  },
+  plan: {
+    rs: '10',
+    desc: 'Talktime of Rs. 7.47, Talktime validity Unrestricted, No Service Validity available with this Talktime Pack',
+    validity: 'N/A',
+    last_update: '08-04-2021'
+  }
+}
+
+
+const session = await db.startSession();
+session.startTransaction();
+await Model.create([{ name: 'Test' }], { session: session });
+let result = await Model.findOne({ name: 'Test' }).session(session);
+session.endSession();
+
+
+
+
+"retr_id": "__new__",
+"retr_user_id": user_id,
+"retr_transact_user_id": user_id,
+"created_by": user_id,
+"retr_cust_name": user_name,
+"retr_mobile": mobile,
+"retr_operator_object": JSON.stringify(provider),
+"retr_operator": provider?.name,
+"retr_plan_object": JSON.stringify(plan?.item),
+"retr_plan": plan?.item?.rs,
+"retr_total_before_tax": parseFloat(plan?.item?.rs).toFixed(8),
+"retr_tds": parseFloat("0").toFixed(8),
+"retr_tds_rate": parseFloat("0").toFixed(8),
+"retr_total_after_tax": parseFloat(plan?.item?.rs).toFixed(8),
+"retr_net_payable": parseFloat(plan?.item?.rs).toFixed(8),
+"retr_response_object": "{}",
+"retr_description": `Mobile recharge for ${mobile}`,
+"retr_short_description": "Amount Debited"
+
+
+
+
+
+
+
+
+
+
+let body = {
+    "operator": provider?.id,
+    "canumber": mobile,
+    "amount": plan?.item?.rs,
+    "referenceid": referenceid ?? '0'
+}
+RechargeApis.doRecharge({ body }).then((res) => {
+    const { status, message, ...rest } = res?.data
+    if (status) {
+        setCreditBalanceAndTransaction({ params: { wallet_id: crwa_id, user_id: crwa_user_id } })
+        NavServiceUtils.navigate(NavKeys.TAB_DASHBOARD.TAB_SCREEN_HOME)
+        setSnack({ message: "Transaction successful", type: 'SUCCESS' })
+    }
+}).catch((err: any) => {
+    console.log(err, 1)
+    setSnack({ message: 'Something went wrong', type: 'ERROR' })
+    setIsLoading(false)
+})
+
+
+paySprint: {
+    baseURL: "https://paysprint.in/service-api/api/v1",
+    header: {
+        "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lc3RhbXAiOjE2NTE2NzAyNjgsInBhcnRuZXJJZCI6IlBTMDA2NjgiLCJyZXFpZCI6IjEyMyJ9.iBYrPVDpFNLJWSsvC7DKZ2QxRFjLS6Ty2CcCPX--M28",
+        "Authorisedkey": "NTEwMWE2MDRkMDM0NjQyNDA3YzAyZjM4Y2NlZWQ2ZTQ="
+    },
+    timeout: 10000,
+    log: false
+},
+
+

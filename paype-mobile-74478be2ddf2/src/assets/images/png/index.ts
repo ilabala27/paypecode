@@ -1,0 +1,16 @@
+export const Images = {
+    logo: require('./logo.png'),
+    more: require('./more.png'),
+    commonNoData: require('./common-no-data.png'),
+    commonNoData1: require('./common-no-data1.jpg'),
+    onBoardSlider1: require('./onboard-slide-1.png'),
+    onBoardSlider2: require('./onboard-slide-2.png'),
+    onBoardSlider3: require('./onboard-slide-3.png'),
+    splashScreen: require('./splash-screen.jpg'),
+    loginBanner: require('./login-banner.jpg'),
+    ImageProfileHolder: require('./common-profile-holder.jpeg'),
+    ComingSoon: require('./coming-soon.png'),
+    ComingSoonText: require('./coming-soon-text.png'),
+    ComingSoonText2: require('./coming-soon-text-2.png'),
+    ImageHolder: require('./image-holder.jpg'),
+}

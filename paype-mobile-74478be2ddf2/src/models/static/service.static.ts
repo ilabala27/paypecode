@@ -1,0 +1,102 @@
+export const onboardingPrice = [
+    {
+        type: "ADMIN",
+        name: '100 ADMIN ( 1@0 Rs)',
+        key: '100-a-onboardings-1@0-rs',
+        applicableTo: ["SUPER_ADMIN"],
+        qty: 100,
+        perPrice: 0,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+    {
+        firstPurchase: true,
+        type: "SUPER_DISTRIBUTOR",
+        name: '100 SUPER DISTRIBUTORS ( 1@150 Rs)',
+        key: '100-sd-onboardings-1@150-rs',
+        applicableTo: ["ADMIN"],
+        qty: 100,
+        perPrice: 127.12,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+    {
+        type: "SUPER_DISTRIBUTOR",
+        name: '50 SUPER DISTRIBUTORS ( 1@150 Rs)',
+        key: '50-sd-onboardings-1@150-rs',
+        applicableTo: ["ADMIN"],
+        qty: 50,
+        perPrice: 127.12,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+    {
+        firstPurchase: true,
+        type: "DISTRIBUTOR",
+        name: '100 DISTRIBUTORS ( 1@250 Rs)',
+        key: '100-d-onboardings-1@250-rs',
+        applicableTo: ["SUPER_DISTRIBUTOR"],
+        qty: 100,
+        perPrice: 211.86,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+    {
+        type: "DISTRIBUTOR",
+        name: '50 DISTRIBUTORS ( 1@250 Rs)',
+        key: '50-d-onboardings-1@250-rs',
+        applicableTo: ["SUPER_DISTRIBUTOR"],
+        qty: 50,
+        perPrice: 211.86,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+    {
+        firstPurchase: true,
+        type: "RETAILER",
+        name: '20 RETAILER ( 1@1000 Rs)',
+        key: '20-r-onboardings-1@1000-rs',
+        applicableTo: ["DISTRIBUTOR"],
+        qty: 1,
+        perPrice: 847.46,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+    {
+        type: "RETAILER",
+        name: '10 RETAILER ( 1@1000 Rs)',
+        key: '10-r-onboardings-1@1000-rs',
+        applicableTo: ["DISTRIBUTOR"],
+        qty: 1,
+        perPrice: 847.46,
+        tds: 0,
+        sGST: 9,
+        iGST: 9,
+        cGST: 9,
+        GST: 18
+    },
+]
+
+export const DEPOSIT_TYPE = [
+    { key: "IMPS", name: "IMPS" },
+    { key: "NEFT", name: "NEFT" },
+    { key: "Cash Deposit Machine", name: "Cash Deposit Machine" },
+]

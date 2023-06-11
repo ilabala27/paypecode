@@ -1,0 +1,60 @@
+
+export default {
+    cr_wallet: 'cr_wallet',
+    cr_wallet_transaction: 'cr_wallet_transaction',
+    cr_wallet_transaction_history: 'cr_wallet_transaction_history',
+    cash_deposit: 'cash_deposit',
+    razor_pay: 'razor_pay',
+}
+
+
+export enum ENUM_WALLET_CURRENCY {
+    INR = 'INR'
+}
+
+export enum ENUM_WALLET_TRANSACTION_TYPE {
+    CR = 'CR',
+    DT = 'DT'
+}
+
+export enum ENUM_WALLET_TRANSACTION_STATUS {
+    // GENERIC
+    CR_SUCCESS = 'CR_SUCCESS',
+    CR_FAILED = 'CR_FAILED',
+    DT_SUCCESS = 'DT_SUCCESS',
+    DT_FAILED = 'DT_FAILED',
+
+    // ONBOARDING
+    DT_SUCCESS_ONBOARDING = 'DT_SUCCESS_ONBOARDING',
+    CR_SUCCESS_ONBOARDING_REFUND = 'DT_SUCCESS_ONBOARDING_REFUND',
+
+    // RECHARGE
+    DT_SUCCESS_RECHARGE = 'DT_SUCCESS_RECHARGE',
+    CR_SUCCESS_RECHARGE_REFUND = 'CR_SUCCESS_RECHARGE_REFUND',
+    CR_SUCCESS_RECHARGE_COMMISION = 'CR_SUCCESS_RECHARGE_COMMISION',
+
+    // CASH DEPOSIT
+    CR_SUCCESS_CASH_DEPOSIT = 'CR_SUCCESS_CASH_DEPOSIT',
+    CR_SUCCESS_CASH_DEPOSIT_REVOKE = 'CR_SUCCESS_CASH_DEPOSIT_REVOKE',
+
+    // Razor pay
+    CR_SUCCESS_RAZORPAY = "CR_SUCCESS_RAZORPAY"
+}
+
+export enum ENUM_CASH_DEPOSIT_STATUS {
+    CREATED = 'CREATED',
+    HOLD = 'HOLD',
+    CANCELED = 'CANCELED',
+    REJECTED = 'REJECTED',
+    APPROVED = 'APPROVED'
+}
+
+export enum ENUM_DEFAULT_STATUS {
+    CREATED = 'CREATED',
+    PROCESSING = 'PROCESSING',
+    HOLD = 'HOLD',
+    COMPLETED = 'COMPLETED',
+    FAILED = 'FAILED',
+    CANCELED = 'CANCELED',
+    REJECTED = 'REJECTED',
+}
